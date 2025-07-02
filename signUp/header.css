@@ -1,0 +1,79 @@
+header {
+    padding-top: 55px;
+    height: 51px;
+    background-color: #1E1F23;
+    width: 393px;
+
+
+}
+
+.head {
+
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.numCircle {
+    color: #8D8D8D;
+    font-family: 'GmarketSansMedium';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 0;
+    box-sizing: border-box;
+    background-color: #292A2E;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 3px 0 3px;
+}
+
+.colorNum {
+    color: rgba(0, 245, 160, 0.90);
+    border: 1px solid rgba(0, 245, 160, 0.90);
+    background-color: #1E1F23;
+
+}
+
+.backArrow1,
+.backArrow2 {
+    background-color: #1E1F23;
+    border: 0;
+    height: 17px;
+    width: 8px;
+    padding: 0;
+    margin: 0 12px 0 21px;
+
+}
+
+.hide {
+    display: none;
+}
+
+.headerP1,
+.headerP2,
+.headerP3 {
+    color: #E2E2E2;
+    font-family: 'GmarketSansMedium';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 180%;
+    margin-top: 7px;
+}
+
+.headerP1 {
+    margin-left: 37px;
+}
+
+.headerP2 {
+    margin-left: 97px;
+}
+
+.headerP3 {
+    margin-left: 157px;
+}

@@ -1,0 +1,42 @@
+.forgetPW {
+    color: #8D8D8D;
+    font-family: "Gmarket Sans";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    /* 19.8px */
+    margin: 9px 0 19px 226px;
+}
+
+hr {
+    margin: 50px 0 13px 1px;
+    width: 351px;
+    color: #8D8D8D;
+}
+
+.signUpPlace {
+    display: flex;
+    gap: 9px;
+}
+
+.signUpPlace>div:first-of-type {
+    color: #8D8D8D;
+    font-family: "Gmarket Sans";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    /* 19.8px */
+
+}
+
+.signUpPlace>div:last-of-type {
+    color: #8D8D8D;
+    font-family: "Gmarket Sans";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+    /* 19.8px */
+}
