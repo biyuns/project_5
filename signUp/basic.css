@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+    width: 393px;
+    height: 852px;
+    background: #1E1F23;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 47px 20px 0 20px;
+    box-sizing: border-box;
+}
+
+.hello {
+    padding-top: 106px;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 171%;
+    /* 41.04px */
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+label {
+    color: #E2E2E2;
+    font-family: 'GmarketSansMedium';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    /* 19.8px */
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+    width: 351px;
+    height: 47px;
+    flex-shrink: 0;
+    color: #8D8D8D;
+    font-family: 'GmarketSansMedium';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 180%;
+    /* 19.8px */
+    margin: 5px 0 21px 0;
+    border-radius: 6px;
+    background: #292A2E;
+    border: 0;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+input:last-of-type {
+    margin-bottom: 0px;
+}
+
+button {
+    width: 351px;
+    height: 59px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #292A2E;
+    color: #8D8D8D;
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    /* 27px */
+    border: 0;
+    box-sizing: border-box;
+
+}
+
+.activeBtn {
+    background: #00F5A0;
+    color: #171717;
+}
+
+.hMargin {
+    padding-top: 0;
+    margin-bottom: 26px;
+}
