@@ -49,7 +49,10 @@ header>.compMBtn {
 
 .profilePho {
     margin: 59px 0 21px 0;
-
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 0;
 }
 
 .modifyBtn {

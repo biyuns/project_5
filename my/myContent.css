@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+    width: 393px;
+    height: 852px;
+    background: #1E1F23;
+    box-sizing: border-box;
+}
+
+
+header {
+    padding: 57px 32px 0 21px;
+    display: flex;
+    justify-content: center;
+
+}
+
+p {
+    color: #FFF;
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin: auto;
+    /* 22.5px */
+}
+
+
+section {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buyInfo {
+    width: 357px;
+    height: 131px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #292A2E;
+    display: flex;
+    padding: 13px 0 13px 10.74px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.receipt {
+    width: 42.947px;
+    height: 14.763px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #00F5A0;
+    color: #000;
+    font-family: "Gmarket Sans";
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    /* 10.5px */
+    margin-bottom: 6.24px;
+    text-align: center;
+}
+
+.title {
+    color: #FFF;
+    font-family: "Gmarket Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 22.5px */
+
+}
+
+.date {
+    color: #8D8D8D;
+    font-family: "Gmarket Sans";
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 10.5px */
+}
+
+.price {
+    color: #525252;
+    font-family: "Gmarket Sans";
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 10.5px */
+    border-radius: 2px;
+    background: #00F5A0;
+    width: 60px;
+    height: 15px;
+    flex-shrink: 0;
+    margin: 8px 0 7px 0;
+    padding: 2px 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.personnel {
+    color: #8D8D8D;
+    font-family: "Gmarket Sans";
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 10.5px */
+
+    border-left: 2px solid #00F5A0;
+    padding-left: 5px;
+}
+
+.productImg {
+    width: 111.395px;
+    height: 104.684px;
+    flex-shrink: 0;
+    border-radius: 6px;
+
+}
+
+.buyInfoText {
+    display: flex;
+    flex-direction: column;
+
+    margin: 5px 0px 3.68px 17.45px;
+    box-sizing: border-box;
+}
+
+.heart {
+    width: 19.153px;
+    height: 16.568px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 17.43px;
+    right: 21.47px;
+
+}
