@@ -7,6 +7,8 @@ const forgetPW = document.querySelector('.forgetPW');
 
 const signUP = document.querySelector('.signUP');
 
+const failM = document.querySelectorAll('p');
+
 let bool;
 
 const activeInput = (event) => {
@@ -23,6 +25,13 @@ const deactiveInput = (event) => {
     loginBtn.disabled = bool;
 }
 
+//로그인 실패
+const failLogin = () => {
+    loginemail.style.border = "1px solid #FF4A4A";
+    loginPW.style.border = "1px solid #FF4A4A";
+    failM[0].classList.remove('hidden');
+    failM[1].classList.remove('hidden');
+}
 
 loginemail.addEventListener('focus', activeInput);
 loginemail.addEventListener('focusout', deactiveInput);
@@ -34,3 +43,4 @@ forgetPW.addEventListener('click', () => {
 signUP.addEventListener('click', () => {
     window.location.href = "signUp1.html";
 })
+

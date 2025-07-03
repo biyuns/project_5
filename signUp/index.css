@@ -40,3 +40,26 @@ hr {
     line-height: 180%;
     /* 19.8px */
 }
+
+
+
+p {
+    position: absolute;
+    top: 454px;
+    left: 20px;
+    color: #FF4A4A;
+    font-family: "Gmarket Sans";
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    /* 12.6px */
+}
+
+p:first-of-type {
+    top: 361px;
+}
+
+.hidden {
+    display: none;
+}
