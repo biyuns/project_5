@@ -7,6 +7,8 @@
     display: flex;
     padding: 13px 0 13px 10.74px;
     box-sizing: border-box;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .receipt {
@@ -99,16 +101,17 @@
     width: 19.153px;
     height: 16.568px;
     flex-shrink: 0;
-    align-self: self-end;
-    margin-left: 66.38px;
-    margin-right: 17.42px;
+    position: absolute;
+    bottom: 17.43px;
+    right: 21.47px;
 
 }
 
 section {
     margin-top: 95px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 header {

@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="modifyPage.css">
+
 </head>
 
 <body>
@@ -25,7 +26,19 @@
             <p>이름</p>
             <input type="text">
         </section>
+
+        <section class="modal hidden">
+            <div>
+                변경할 사진을 선택해 주세요.
+                <input type="file" class="real-upload" accept="image/*" required multiple style="display: none;">
+                <div class="upload">사진 선택</div>
+            </div>
+        </section>
     </div>
+
+
+
+    <script src="modifyPage.js"></script>
 </body>
 
 </html>
