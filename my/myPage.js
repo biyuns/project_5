@@ -3,8 +3,8 @@ const hoverN = document.querySelector('.hoverN');
 
 const modify = document.querySelector('.modify');
 
-const myContent = document.querySelector('#myContent');
-const partiBuy = document.querySelector('#partiBuy');
+const myContent = document.querySelector('.myContentBtn');
+const partiBuy = document.querySelector('.partBuyBtn');
 const logout = document.querySelector('#logout');
 
 

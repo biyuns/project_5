@@ -63,7 +63,7 @@
     height: 15px;
     flex-shrink: 0;
     margin: 8px 0 7px 0;
-    padding: 2px 5px;
+    padding: 2px 0;
     box-sizing: border-box;
     text-align: center;
 }

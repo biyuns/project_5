@@ -38,3 +38,31 @@ li:last-of-type {
     border-bottom: 2px solid #00F5A0;
     color: #00F5A0;
 }
+
+.deadline {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 111.39px;
+    height: 104.68px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: rgba(88, 88, 88, 0.82);
+    color: #FFF;
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    top: 13px;
+    left: 11px;
+    box-sizing: border-box;
+    /* 22.5px */
+}
+
+.productImg {
+    position: relative;
+
+}

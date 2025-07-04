@@ -79,3 +79,21 @@
 .checkImg {
     margin-top: 82px;
 }
+
+p {
+    position: absolute;
+    top: 516px;
+    left: 20px;
+    color: #FF4A4A;
+    font-family: 'GmarketSansMedium';
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    /* 12.6px */
+
+}
+
+.hidden {
+    display: none;
+}

@@ -7,6 +7,8 @@ const userName = document.querySelector('#userName');
 const studentNum = document.querySelector('#studentNum');
 const department = document.querySelector('#department');
 
+const failM = document.querySelector('p');
+
 
 const btnW = document.querySelector('.btnW');
 const btnM = document.querySelector('.btnM');
@@ -19,6 +21,7 @@ const activeInput = (event) => {
     event.target.style.border = "1px solid #00F5A0"
 }
 
+//버튼 활성화
 const deactiveInput = (event) => {
     event.target.style.border = "0"
     const formId = event.target.parentNode.id;
@@ -37,12 +40,21 @@ const deactiveInput = (event) => {
     }
 }
 
+//성별 클릭 활성화
 const clickGender = (event) => {
     btnW.style.border = "0";
     btnM.style.border = "0";
     event.target.style.border = "1px solid #00F5A0"
     genderValue = event.target.value;
 }
+
+
+//비밀번호 불일치
+const failPW = () => {
+    checkPW.style.border = "1px solid #FF4A4A";
+    failM.classList.remove('hidden');
+}
+
 
 email.addEventListener('focus', activeInput);
 email.addEventListener('focusout', deactiveInput);
