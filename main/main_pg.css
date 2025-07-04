@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YdestreetB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 배너(3개) 컨테이너 css  */
+
+.main_title_ct {
+    width: 351px;
+    height: 130px;
+    margin: 0 auto;
+    margin-bottom: 17px;
+    overflow: hidden; /* 슬라이드 영역 밖은 안 보이게 */
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    width: calc(351px * 3); /* 이미지 개수에 맞게 */
+    height: 130px;
+    transition: transform 0.5s;
+}
+
+
+#img1 {
+    position: relative;
+    width: 351px; 
+    height: 130px;
+    background: linear-gradient(180deg, rgba(75, 75, 75, 0.00) 0%, #1D1D1D 100%),
+              url('/img/main_title/main_img.svg') center/cover no-repeat;
+}
+
+.img-raider {
+  position: absolute;
+  left: 91%;   /* 원하는 위치(px, % 등) */
+  top: 75%;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+}
+
+.img-main {
+    position: absolute;
+    left : 50%;
+    top : 90%;
+    width : 13px;
+    height : 3px;
+    z-index :99;
+}
+
+.word1 { 
+    position: absolute;
+    color: #FFF;
+font-family: 'GmarketSansMedium';
+font-size: 7px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 10.5px */
+left : 4%;
+top : 60%;
+}
+
+.word2 {
+     position: absolute;
+    color: #00F5A0;
+-webkit-text-stroke-width: 0.2px;
+-webkit-text-stroke-color: #00F5A0;
+font-family: 'GmarketSansMedium';
+font-size: 11px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 16.5px */
+left : 4%;
+top : 68%;
+}
+
+#img2 {
+    position: relative;
+    width: 351px; 
+    height: 130px;
+    background: url("/img/main_title/main_top_img2.svg") center/cover no-repeat;
+}
+.out_round {
+    position: absolute;
+    width: 78px; height: 78px;
+    stroke-width: 0.5px;
+    stroke: #FFF; 
+    z-index: 1;
+    position: absolute;
+    left : 65%;
+    top : 20%;
+}
+.in_round {
+    width: 50px; height: 50px;
+    stroke-width: 0.5px;
+    stroke: #FFF;
+    z-index: 2;
+        position: absolute;
+    left :69%;
+    top : 30%;
+}
+
+.netflix, .tving, .coupang, .wavve {
+  position: absolute;
+  width: 36.205px; height: 36.205px;     /* 아이콘 크기 */
+  z-index: 3;
+}
+
+.netflix  { left: 80%; top: 36%;     }
+.tving    { left: 71%;  top: 13%;   }
+.coupang  { left: 71%; top: 60%;  }
+.wavve    { left: 61%;   top: 36%;   }
+
+.word3 {
+    position: absolute;
+    color: #AEAEAE;
+font-family: 'GmarketSansMedium';
+font-size: 7px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 10.5px */
+left : 10%;
+top : 15%
+}
+
+.word4 {
+    position: absolute;
+    color: #FFF;
+font-family: 'GmarketSansMedium';
+font-size: 11px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 16.5px */
+left : 10%;
+top : 25%;
+}
+
+.word5 {
+    position: absolute;
+    color: #00F5A0;
+font-family: 'GmarketSansMedium';
+font-size: 11px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+left:10%;
+top : 40%;
+}
+
+.word6, .word7 {
+    position: absolute;
+    color: #AEAEAE;
+font-family: 'GmarketSansMedium';
+font-size: 5px;
+font-style: normal;
+font-weight: 300;
+line-height: 150%; /* 7.5px */
+left : 10%;
+top : 65%;
+}
+
+.word7 {
+    left : 10%;
+    top : 70%;
+}
+
+.img2 {
+    position : absolute;
+    left : 50%;
+    top : 90%;
+    width : 13px;
+    height : 3px;   
+    flex-shrink: 0;
+
+}
+
+/* 아이콘 컨테이너 css */
+.category_ct {
+    width : 351px;
+    height: 124px;
+    display : flex;
+    flex-direction: column;
+    justify-self: center;
+    gap : 10px;
+}
+
+.category { 
+    width : 62px;
+    height : 57px;
+    border-radius: 6px;
+    background-color: #292A2E;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3px;
+}
+
+.category_1ct, .category_2ct {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;  
+}
+
+.category_word {
+    color : #8D8D8D;
+    font-family: 'GmarketSansMedium';
+    font-size : 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height : 180%;
+    margin:0;
+    margin-top:2px;   
+}
