@@ -38,9 +38,13 @@ loginemail.addEventListener('focus', activeInput);
 loginemail.addEventListener('focusout', deactiveInput);
 loginPW.addEventListener('focus', activeInput);
 loginPW.addEventListener('focusout', deactiveInput);
+
+//페이지 이동(비번 찾기) 
 forgetPW.addEventListener('click', () => {
     window.location.href = "findPW.html";
 })
+
+//페이지 이동(회원가입)
 signUP.addEventListener('click', () => {
     window.location.href = "signUp1.html";
 })
