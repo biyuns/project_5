@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>API 연동 통합 테스트</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    body { font-family: sans-serif; }
+    input, select, button { margin: 4px; }
+    pre { background: #f4f4f4; padding: 10px; }
+    section { margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <h1>API 연동 테스트</h1>
+
+  <section>
+    <h2>회원가입 1단계</h2>
+    <input id="signup_email" placeholder="이메일">
+    <input id="signup_password" placeholder="비밀번호" type="password">
+    <button onclick="signupStep1()">회원가입1 요청</button>
+    <pre id="result1"></pre>
+  </section>
+
+  <section>
+    <h2>이메일 인증</h2>
+    <input id="verify_token" placeholder="인증 토큰">
+    <button onclick="verifyEmail()">이메일 인증 요청</button>
+    <pre id="result2"></pre>
+  </section>
+
+  <section>
+    <h2>회원가입 2단계</h2>
+    <input id="signup_name" placeholder="이름">
+    <select id="signup_gender">
+      <option value="">성별</option>
+      <option value="male">남성</option>
+      <option value="female">여성</option>
+    </select>
+    <input id="signup_number" placeholder="학번">
+    <input id="signup_major" placeholder="전공">
+    <button onclick="signupStep2()">회원가입2 요청</button>
+    <pre id="result3"></pre>
+  </section>
+
+  <section>
+    <h2>회원가입 완료</h2>
+    <button onclick="signupSuccess()">회원가입 완료 요청</button>
+    <pre id="result4"></pre>
+  </section>
+
+  <section>
+    <h2>로그인</h2>
+    <input id="login_email" placeholder="이메일">
+    <input id="login_password" placeholder="비밀번호" type="password">
+    <button onclick="login()">로그인 요청</button>
+    <pre id="result5"></pre>
+  </section>
+
+  <script>
+    const BASE_URL = 'http://3.34.81.151:8080'; // 포트가 있으면 :포트번호 추가
+
+    // 회원가입 1단계
+    function signupStep1() {
+      axios.post(`${BASE_URL}/members/step1`, {
+        email: document.getElementById('signup_email').value,
+        password: document.getElementById('signup_password').value
+      })
+      .then(res => document.getElementById('result1').textContent = JSON.stringify(res.data, null, 2))
+      .catch(err => document.getElementById('result1').textContent = err.response ? JSON.stringify(err.response.data, null, 2) : err);
+    }
+
+    // 이메일 인증
+    function verifyEmail() {
+      const token = document.getElementById('verify_token').value;
+      axios.get(`${BASE_URL}/signup/members/verify`, { params: { token } })
+      .then(res => document.getElementById('result2').textContent = JSON.stringify(res.data, null, 2))
+      .catch(err => document.getElementById('result2').textContent = err.response ? JSON.stringify(err.response.data, null, 2) : err);
+    }
+
+    // 회원가입 2단계
+    function signupStep2() {
+      axios.post(`${BASE_URL}/signup/members/step2`, {
+        name: document.getElementById('signup_name').value,
+        gender: document.getElementById('signup_gender').value,
+        number: document.getElementById('signup_number').value,
+        major: document.getElementById('signup_major').value
+      })
+      .then(res => document.getElementById('result3').textContent = JSON.stringify(res.data, null, 2))
+      .catch(err => document.getElementById('result3').textContent = err.response ? JSON.stringify(err.response.data, null, 2) : err);
+    }
+
+    // 회원가입 완료
+    function signupSuccess() {
+      axios.get(`${BASE_URL}/signup/members/success`)
+      .then(res => document.getElementById('result4').textContent = JSON.stringify(res.data, null, 2))
+      .catch(err => document.getElementById('result4').textContent = err.response ? JSON.stringify(err.response.data, null, 2) : err);
+    }
+
+    // 로그인
+    function login() {
+      axios.post(`${BASE_URL}/login`, {
+        email: document.getElementById('login_email').value,
+        password: document.getElementById('login_password').value
+      })
+      .then(res => document.getElementById('result5').textContent = JSON.stringify(res.data, null, 2))
+      .catch(err => document.getElementById('result5').textContent = err.response ? JSON.stringify(err.response.data, null, 2) : err);
+    }
+  </script>
+</body>
+</html>

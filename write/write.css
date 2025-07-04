@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YdestreetB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('./fonts/GmarketSansBold.otf') format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('./fonts/GmarketSansMedium.otf') format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('./fonts/GmarketSansLight.otf') format('opentype');
+  font-weight: 300;
+}
+
+
+body {
+    min-height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 세로 가운데(X), 위쪽 정렬(O) */
+    /* overflow-y: auto;  */
+    margin : 0;
+}
+
+.write_ct {
+    width: 393px;
+    height: 852px;
+    overflow-y: auto;
+    background: #1E1F23;
+    box-sizing: border-box;
+    overflow-x:visible
+}
+
+/* 게시글 작성 헤더부분 */
+.write_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 57px; 
+    box-sizing: border-box;
+}
+
+.header_side {
+    width: 48px; /* 아이콘 크기와 맞춤 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.header_main {
+    flex: 1;
+  font-family: 'GmarketSans';
+  font-weight: normal;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 150%; /* 22.5px */
+    color: #FFF;
+    text-align: center;
+    letter-spacing: -0.5px;
+    user-select: none;
+}
+
+/* 라인 */
+.line {
+    width: 393px;
+    height: 0;
+    border: 1px solid #8D8D8D;
+    margin-top : 28px;
+}
+
+/* 사진 추가 */
+
+.add_picture {
+    margin-left : 20px;
+}
+.picture_ct {
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80.881px;
+height: 79px;
+flex-shrink: 0;
+border-radius: 6px;
+background: #292A2E;
+margin-bottom:5px;
+margin-top:21px;
+
+}
+
+.picture {
+    margin-left : 6px;
+}
+
+.picture_word {
+    color: #00F5A0;
+  font-family: 'GmarketSans';
+font-size: 10.89px;
+font-style: normal;
+font-weight: normal;
+line-height: 180%; /* 19.602px */
+letter-spacing: -0.327px;
+margin :0;
+margin-top : 5px;
+}
+
+.picture_count {
+    color: #8D8D8D;
+  font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+line-height: 180%; /* 19.8px */
+letter-spacing: -0.33px;
+margin-bottom: 5px;
+}
+
+/* 공구 게시글 작성 제목들 통합 css */
+.hap_ct {
+    display : flex;
+    flex-direction: column;
+    gap : 15px;
+}   
+
+.write_title_ct, .write_explanation_ct, .wr_category_ct, .product_name_ct, .sell_link_ct, .open_chat_ct, .price_ct, .month_ct, .hours_ct, .finish_ct, .place_ct {
+    margin-left : 20px;
+    display : flex;
+    flex-direction: column;
+    gap : 5px;
+}
+.wr_title, .wr_category, .wr_exp, .wr_pro_name, .wr_sell_link, .wr_openchat, .wr_price, .wr_month, .wr_hours, .wr_finish, .wr_place {
+    color: #FFF;
+  font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+line-height: 150%; /* 16.5px */
+}
+
+input {
+    width: 355px;
+height: 38px;
+flex-shrink: 0;
+border-radius: 6px;
+background: #292A2E;
+border : 0px;
+}
+
+input::placeholder {
+    color: #8D8D8D;
+  font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: 300;
+line-height: 150%; /* 16.5px */
+padding-left: 14px;
+}
+
