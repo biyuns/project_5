@@ -67,7 +67,7 @@ section {
     border-radius: 7px;
     background: #00F5A0;
     color: #000;
-    font-family: "Gmarket Sans";
+    font-family: 'GmarketSansMedium';
     font-size: 7px;
     font-style: normal;
     font-weight: 400;
@@ -79,7 +79,7 @@ section {
 
 .title {
     color: #FFF;
-    font-family: "Gmarket Sans";
+    font-family: 'GmarketSansMedium';
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -90,7 +90,7 @@ section {
 
 .date {
     color: #8D8D8D;
-    font-family: "Gmarket Sans";
+    font-family: 'GmarketSansMedium';
     font-size: 7px;
     font-style: normal;
     font-weight: 400;
@@ -100,7 +100,7 @@ section {
 
 .price {
     color: #525252;
-    font-family: "Gmarket Sans";
+    font-family: 'GmarketSansMedium';
     font-size: 7px;
     font-style: normal;
     font-weight: 400;
@@ -119,7 +119,7 @@ section {
 
 .personnel {
     color: #8D8D8D;
-    font-family: "Gmarket Sans";
+    font-family: 'GmarketSansMedium';
     font-size: 7px;
     font-style: normal;
     font-weight: 400;

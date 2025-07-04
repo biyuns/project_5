@@ -1,3 +1,12 @@
+const backArrow = document.querySelector('img');
+
+//페이지 이동(마이페이지)
+backArrow.addEventListener('click', () => {
+    window.location.href = "myPage.html";
+})
+
+
+
 const myContentList = document.querySelector('section');
 const li = document.querySelectorAll('li');
 

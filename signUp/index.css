@@ -1,6 +1,6 @@
 .forgetPW {
     color: #8D8D8D;
-    font-family: "Gmarket Sans";
+    font-family: 'GmarketSansMedium';
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -22,7 +22,7 @@ hr {
 
 .signUpPlace>div:first-of-type {
     color: #8D8D8D;
-    font-family: "Gmarket Sans";
+    font-family: 'GmarketSansMedium';
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -33,7 +33,7 @@ hr {
 
 .signUpPlace>div:last-of-type {
     color: #8D8D8D;
-    font-family: "Gmarket Sans";
+    font-family: 'GmarketSansMedium';
     font-size: 11px;
     font-style: normal;
     font-weight: 700;
@@ -48,7 +48,7 @@ p {
     top: 454px;
     left: 20px;
     color: #FF4A4A;
-    font-family: "Gmarket Sans";
+    font-family: 'GmarketSansMedium';
     font-size: 7px;
     font-style: normal;
     font-weight: 400;
