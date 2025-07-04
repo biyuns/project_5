@@ -24,6 +24,7 @@ const clickNext = () => {
 
 
 
+
 nextBtn.addEventListener('click', clickNext);
 compBtn.addEventListener('click', () => {
     window.location.href = "signUp2.html";

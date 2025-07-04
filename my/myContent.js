@@ -13,13 +13,15 @@ lists = [
         title: "공구",
         date: "마감 6.11(수) 오후 8:00",
         price: 11000,
-        personnel: "17/20명 참여중"
+        personnel: "17/20명 참여중",
+        like: true
     }, {
         receiptM: "직접수령",
         title: "공구2",
         date: "마감 6.13(금) 오후 8:00",
         price: 11000,
-        personnel: "17/20명 참여중"
+        personnel: "17/20명 참여중",
+        like: false
     },
 ]
 
@@ -34,7 +36,23 @@ lists.forEach(list => {
     productImg.classList.add('productImg');
     buyInfoText.classList.add('buyInfoText');
     heart.classList.add('heart');
-    heart.setAttribute('src', "../svg/heart.svg");
+    //찜 유무에 따라 svg변경
+    if (list.like) {
+        heart.setAttribute('src', "../svg/heart.svg");
+    } else {
+        heart.setAttribute('src', "../svg/unheart.svg");
+    }
+
+    //찜 유무 변경
+    heart.addEventListener('click', () => {
+        list.like = !list.like;
+        if (list.like) {
+            heart.setAttribute('src', "../svg/heart.svg");
+        } else {
+            heart.setAttribute('src', "../svg/unheart.svg");
+        }
+    })
+
 
     const receiptDiv = document.createElement('div');
     const titleDiv = document.createElement('div');

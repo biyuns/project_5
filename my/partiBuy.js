@@ -17,13 +17,15 @@ alists = [
         title: "공구",
         date: "마감 6.11(수) 오후 8:00",
         price: 11000,
-        personnel: "17/20명 참여중"
+        personnel: "17/20명 참여중",
+        like: true
     }, {
         receiptM: "직접수령",
         title: "공구2",
         date: "마감 6.13(금) 오후 8:00",
         price: 11000,
-        personnel: "17/20명 참여중"
+        personnel: "17/20명 참여중",
+        like: false
     },
 ]
 
@@ -33,19 +35,25 @@ blists = [
         title: "공구3",
         date: "마감 6.11(수) 오후 8:00",
         price: 11000,
-        personnel: "17/20명 참여중"
+        personnel: "17/20명 참여중",
+        like: false
     }, {
         receiptM: "직접수령",
         title: "공구4",
         date: "마감 6.13(금) 오후 8:00",
         price: 11000,
-        personnel: "17/20명 참여중"
+        personnel: "17/20명 참여중",
+        like: true
     },
 ]
 
 //화면 출력
 const showList = (lists) => {
     myContentList.innerHTML = "";
+    if (lists === blists) {
+        const deadline = document.createElement('div');
+
+    }
     lists.forEach(list => {
 
         const buyInfo = document.createElement('div');
@@ -55,9 +63,26 @@ const showList = (lists) => {
 
         buyInfo.classList.add('buyInfo');
         productImg.classList.add('productImg');
+        productImg.setAttribute('src', "../svg/product.svg");
         buyInfoText.classList.add('buyInfoText');
         heart.classList.add('heart');
-        heart.setAttribute('src', "../svg/heart.svg");
+
+        //찜 유무에 따라 svg변경
+        if (list.like) {
+            heart.setAttribute('src', "../svg/heart.svg");
+        } else {
+            heart.setAttribute('src', "../svg/unheart.svg");
+        }
+
+        //찜 유무 변경
+        heart.addEventListener('click', () => {
+            list.like = !list.like;
+            if (list.like) {
+                heart.setAttribute('src', "../svg/heart.svg");
+            } else {
+                heart.setAttribute('src', "../svg/unheart.svg");
+            }
+        })
 
         const receiptDiv = document.createElement('div');
         const titleDiv = document.createElement('div');
@@ -77,7 +102,6 @@ const showList = (lists) => {
         personnelDiv.textContent = list.personnel;
 
 
-
         buyInfoText.appendChild(receiptDiv);
         buyInfoText.appendChild(titleDiv);
         buyInfoText.appendChild(dateDiv);
@@ -94,6 +118,18 @@ const showList = (lists) => {
 }
 
 
+//마감 표시 생성
+const deadlineDiv = () => {
+    const buyInfo = document.querySelectorAll('.buyInfo');
+    buyInfo.forEach(info => {
+        const deadline = document.createElement('div');
+        deadline.classList.add('deadline');
+        deadline.textContent = "마감";
+        info.appendChild(deadline);
+    });
+}
+
+
 showList(alists);
 
 
@@ -105,6 +141,7 @@ li[0].addEventListener('click', () => {
 
 li[1].addEventListener('click', () => {
     showList(blists);
+    deadlineDiv();
     li[1].classList.add('activeLi');
     li[0].classList.remove('activeLi');
 })

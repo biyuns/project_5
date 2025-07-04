@@ -18,7 +18,15 @@ body {
     height: 852px;
     background: #1E1F23;
     box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
 }
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
 
 .content {
     padding: 47px 20px 0 20px;
