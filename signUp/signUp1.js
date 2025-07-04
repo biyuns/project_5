@@ -8,7 +8,7 @@ const backArrow2 = document.querySelector('.backArrow2');
 const nextBtn = document.querySelector('.nextBtn');
 const compBtn = document.querySelector('.compBtn');
 
-
+//화면 전환 코드
 const clickNext = () => {
     form1.classList.toggle('hide');
     form2.classList.toggle('hide');

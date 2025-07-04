@@ -1,3 +1,5 @@
+//input 입력 시 border 활성화 코드
+
 const email = document.querySelector('#email');
 const pw = document.querySelector('#pw');
 const checkPW = document.querySelector('#checkPW');

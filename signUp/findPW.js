@@ -1,3 +1,5 @@
+//input 입력 시 border 활성화 코드
+
 const findemail = document.querySelector('#findemail');
 const changePWBtn = document.querySelector('.changePWBtn');
 const signUP = document.querySelector('.signUP');

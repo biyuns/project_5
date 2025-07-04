@@ -11,6 +11,7 @@ const failM = document.querySelectorAll('p');
 
 let bool;
 
+//input 입력 시 border 활성화 코드
 const activeInput = (event) => {
     event.target.style.border = "1px solid #00F5A0"
 }

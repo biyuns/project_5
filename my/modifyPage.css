@@ -88,6 +88,9 @@ header>.compMBtn {
     font-weight: 300;
     line-height: 150%;
     border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 10px 0 11px 14px;
     /* 16.5px */
 }
 

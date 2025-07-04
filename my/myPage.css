@@ -136,6 +136,7 @@ header>button {
 }
 
 .rangeBar {
+    position: relative;
     width: 20%;
     border-radius: 9px;
     background: #00F5A0;
@@ -146,8 +147,10 @@ header>button {
 }
 
 .rangeBall {
+    position: absolute;
     width: 21px;
     height: 21px;
+    left: -10px;
 }
 
 ul {

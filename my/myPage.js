@@ -4,7 +4,7 @@ const hoverN = document.querySelector('.hoverN');
 
 
 
-
+//modal 구현
 moreInfo.addEventListener('mouseover', function () {
     hoverN.classList.add('show');
 })
