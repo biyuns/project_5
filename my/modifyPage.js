@@ -4,7 +4,7 @@ const modal = document.querySelector('.modal');
 const realUpload = document.querySelector('.real-upload');
 const upload = document.querySelector('.upload');
 
-
+//img 파일 읽어오고 업로드하는 코드
 const getImageFiles = (e) => {
     const file = e.currentTarget.files[0];
     const profilePho = document.querySelector('.profilePho')

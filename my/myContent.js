@@ -16,6 +16,7 @@ lists = [
     },
 ]
 
+//화면 출력
 lists.forEach(list => {
     const buyInfo = document.createElement('div');
     const productImg = document.createElement('img');

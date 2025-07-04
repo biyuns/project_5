@@ -1,5 +1,9 @@
+//찜페이지
+
 const heartList = document.querySelector('section');
 
+
+//찜리스트 예시
 lists = [
     {
         receiptM: "직접수령",
@@ -16,6 +20,7 @@ lists = [
     },
 ]
 
+//화면 출력
 lists.forEach(list => {
     const buyInfo = document.createElement('div');
     const productImg = document.createElement('img');
