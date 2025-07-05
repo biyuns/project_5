@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+    width: 393px;
+    height: 852px;
+    background: #1E1F23;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: flex;
+
+}
+
+.searchBar {
+    margin: 45px 48px 0 19px;
+    display: flex;
+    width: 297px;
+    height: 45px;
+    flex-shrink: 0;
+    background: #171717;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9px 0 15px;
+}
+
+input {
+    outline: none;
+    width: 234px;
+    height: 45px;
+    padding: 0;
+    border: 0;
+    background: #171717;
+    color: #fff;
+    line-height: 45px;
+
+}
+
+.searchg {
+    width: 19px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+label {
+    width: 19px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.xBtn {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-color: #292A2E;
+    border-radius: 50%;
+    border: 0;
+}
+
+.backArrow {
+    margin: 45px 0 0 21px;
+}
