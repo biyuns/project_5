@@ -1,5 +1,4 @@
-// 서버 기본 주소
-const BASE_URL = 'http://3.34.81.151:8080';
+// BASE_URL 없이 바로 /api/로 요청
 
 // 회원가입 1단계: 이메일, 비밀번호 입력 후 '다음' 버튼 클릭 시
 document.querySelector('.nextBtn').addEventListener('click', async function () {
@@ -22,8 +21,8 @@ document.querySelector('.nextBtn').addEventListener('click', async function () {
   warning.classList.add('hidden');
 
   try {
-    // API 호출
-    const res = await fetch(`${BASE_URL}/api/members/step1`, {
+    // API 호출 (BASE_URL 없이)
+    const res = await fetch(`/api/members/step1`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -62,7 +61,7 @@ document.querySelector('.compBtn').addEventListener('click', async function () {
   warning.classList.add('hidden');
 
   try {
-    const res = await fetch(`${BASE_URL}/api/members/step2`, {
+    const res = await fetch(`/api/members/step2`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, gender, number, major })
@@ -94,7 +93,7 @@ document.querySelectorAll('.btnW, .btnM').forEach(btn => {
 // 이메일 인증 (토큰 필요)
 async function verifyEmail(token) {
   try {
-    const res = await fetch(`${BASE_URL}/api/members/verify?token=${encodeURIComponent(token)}`);
+    const res = await fetch(`/api/members/verify?token=${encodeURIComponent(token)}`);
     const data = await res.json();
     if (res.ok) {
       alert('이메일 인증 성공');
@@ -109,7 +108,7 @@ async function verifyEmail(token) {
 // 로그인 예시 (로그인 폼이 별도로 있을 경우)
 async function login(email, password) {
   try {
-    const res = await fetch(`${BASE_URL}/login`, {
+    const res = await fetch(`/api/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
