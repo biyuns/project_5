@@ -1,12 +1,5 @@
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'YdestreetB';
+      font-family: 'YdestreetB';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetB.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
@@ -14,17 +7,17 @@
 
 @font-face {
   font-family: 'GmarketSans';
-  src: url('./fonts/GmarketSansBold.otf') format('opentype');
+  src: url('/fonts/GmarketSansBold.otf') format('opentype');
   font-weight: bold;
 }
 @font-face {
   font-family: 'GmarketSans';
-  src: url('./fonts/GmarketSansMedium.otf') format('opentype');
+  src: url('/fonts/GmarketSansMedium.otf') format('opentype');
   font-weight: normal;
 }
 @font-face {
   font-family: 'GmarketSans';
-  src: url('./fonts/GmarketSansLight.otf') format('opentype');
+  src: url('/fonts/GmarketSansLight.otf') format('opentype');
   font-weight: 300;
 }
 
@@ -41,10 +34,9 @@ body {
 .write_ct {
     width: 393px;
     height: 852px;
-    overflow-y: auto;
+    overflow-y: auto; 
     background: #1E1F23;
     box-sizing: border-box;
-    overflow-x:visible
 }
 
 /* 게시글 작성 헤더부분 */
@@ -79,7 +71,7 @@ body {
 
 /* 라인 */
 .line {
-    width: 393px;
+    width: 100%;
     height: 0;
     border: 1px solid #8D8D8D;
     margin-top : 28px;
@@ -141,6 +133,7 @@ margin-bottom: 5px;
 
 .write_title_ct, .write_explanation_ct, .wr_category_ct, .product_name_ct, .sell_link_ct, .open_chat_ct, .price_ct, .month_ct, .hours_ct, .finish_ct, .place_ct {
     margin-left : 20px;
+    margin-right: 20px;
     display : flex;
     flex-direction: column;
     gap : 5px;
@@ -153,23 +146,145 @@ font-style: normal;
 font-weight: normal;
 line-height: 150%; /* 16.5px */
 }
-
 input {
+  color: #FFF;
+font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: 300;
+line-height: 150%; /* 16.5px */
+}
+
+input, textarea {
     width: 355px;
 height: 38px;
 flex-shrink: 0;
 border-radius: 6px;
 background: #292A2E;
 border : 0px;
+padding: 0;
+padding-left : 14px;
 }
 
-input::placeholder {
+textarea {
+  width: 355px;
+height: 148px;
+flex-shrink: 0;
+border-radius: 6px;
+background: #292A2E;
+  color: #FFF;
+font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: 300;
+line-height: 150%; /* 16.5px */
+padding-top : 10px;
+}
+
+input::placeholder, textarea::placeholder {
     color: #8D8D8D;
   font-family: 'GmarketSans';
 font-size: 11px;
 font-style: normal;
 font-weight: 300;
 line-height: 150%; /* 16.5px */
-padding-left: 14px;
 }
 
+/* 단위 가격 css */
+.pr_total_ct {
+  display : flex;
+  gap : 11px;
+}
+
+.pr_ct1, .pr_ct2 {
+  display : flex;
+  flex-direction: column;
+  gap:5px;
+}
+
+.prt {
+  color: #8D8D8D;
+  font-family: 'GmarketSans';
+font-size: 9px;
+font-style: normal;
+font-weight: normal;
+line-height: 150%; /* 13.5px */
+margin:0px;
+}
+
+.pr_input1, .pr_input2 {
+width: 172px;
+height: 38px;
+flex-shrink: 0;
+border-radius: 6px;
+background: #292A2E;
+padding-left : 0px;
+text-align: right;
+  padding-right : 7.5px;
+  }
+
+.pr_input1::placeholder, .pr_input2::placeholder {
+  text-align: right;
+  padding-left :0px;
+}
+.budam_price {
+  color: #8D8D8D;
+  font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 16.5px */
+margin : 0px;
+}
+
+/* 마감 일정 버튼 css */
+.write_delivery_ct {
+  display : flex;
+  gap : 6px;
+}
+
+.dv, .inter {
+  width: 80px;
+height: 23px;
+flex-shrink: 0;
+border-radius: 11px;
+background: #292A2E;
+color: #8D8D8D;
+  font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: 300;
+line-height: 150%; /* 16.5px */
+border : 0;
+padding : 0px;
+margin-top : 13px;
+}
+
+/* 작성 완료 버튼 */
+.finish_bt {
+  width: 351px;
+height: 59px;
+flex-shrink: 0;
+border-radius: 50px;
+background: #292A2E;
+margin-left : 21px;
+margin-top: 25px;
+color: #8D8D8D;
+  font-family: 'GmarketSans';
+font-size: 15px;
+font-style: normal;
+font-weight: normal;
+line-height: 180%; /* 27px */
+border : 0px;
+margin-bottom : 28px;
+}
+
+.write_delivery_ct button.active {
+    background: #00F5A0;
+    color: #000;
+    font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+line-height: 150%; /* 16.5px */
+}

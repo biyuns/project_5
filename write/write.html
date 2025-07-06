@@ -35,7 +35,8 @@
 
             <section class="write_explanation_ct">
                 <div class="wr_exp"> 자세한 설명</div>
-                <textarea class="exp_input" placeholder="게시판에 올릴 게시글 내용을 작성해 주세요. \b 신뢰할 수 있는 거래를 위해 자세히 적어주세요."></textarea>
+                <textarea class="exp_input" placeholder="게시판에 올릴 게시글 내용을 작성해 주세요. 
+신뢰할 수 있는 거래를 위해 자세히 적어주세요."></textarea>
             </section>
         
             <section class="wr_category_ct">
@@ -62,14 +63,15 @@
                 <div class="wr_price"> 단위 가격 </div>
                 <div class="pr_total_ct">
                     <div class="pr_ct1">
-                         <p> 총 가격 (배송비 포함) </p>
+                         <p class="prt"> 총 가격 (배송비 포함) </p>
                         <input type="text" class="pr_input1" placeholder="원">
                     </div>
                     <div class="pr_ct2">
-                        <p> 모집 인원(자신 포함) </p>
+                        <p class="prt"> 모집 인원(자신 포함) </p>
                         <input type="text" class="pr_input2" placeholder="명">
                     </div>
-                <p class="budam_price"> 1안덩 뷰덤 가격: </p>
+                </div>
+                <p class="budam_price"> 1인당 부담 가격: </p>
             </section>
         
             <section class="month_ct">
@@ -85,7 +87,7 @@
             <section class="finish_ct">
                 <div class="wr_finish"> 마감 일정 </div>
                 <input type="text" class="finish_input" placeholder="마감 일정">
-                <div class="wirte_delivery_ct">
+                <div class="write_delivery_ct">
                     <button class="dv"> 배달 </button>
                     <button class="inter"> 직접 수령</button>
                 </div>
@@ -97,7 +99,24 @@
             </section>
 
         </section>
+
+        <section class="finish_btn_Ct">
+            <button class="finish_bt"> 작성 완료 </button>
+        </section>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const deliveryBtns = document.querySelectorAll('.write_delivery_ct button');
+    deliveryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            deliveryBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+</script>
+
 
 </body>
 </html>
