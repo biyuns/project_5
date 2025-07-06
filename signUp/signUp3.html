@@ -16,7 +16,7 @@
     <div class="main">
         <header>
             <div class="head">
-                <button class="backArrow1"><img src="/svg/backArrow.svg"></button>
+                <button class="backArrow2"><img src="/svg/backArrow.svg"></button>
                 <div class="numCircle colorNum">1</div>
                 <img src="/svg/lodingCircle.svg">
                 <img src="/svg/lodingCircle.svg">
@@ -27,27 +27,30 @@
                 <img src="/svg/lodingCircle.svg">
                 <div class="numCircle">3</div>
             </div>
-            <div class="headerP1">기본 정보</div>
+
+            <div class="headerP2">학생 정보</div>
         </header>
         <section class="content">
             <section class="hello hMargin">
                 <div>회원가입</div>
             </section>
-            <form class="form" id="form1">
-                <label for="email">이메일</label>
-                <input type="email" id="email" placeholder="이메일 주소를 입력해 주세요.">
-                <div class="warningP">*인증을 위해 학교 계정을 사용해 주세요.</div>
-                <label for="pw">비밀번호</label>
-                <input type="password" id="pw" placeholder="비밀번호를 입력해 주세요.">
-                <label for="checkPW">비밀번호 확인</label>
-                <input type="password" id="checkPW" placeholder="다시 한번 입력해 주세요.">
-                <p class="hidden">입력하신 정보를 확인해 주세요.</p>
-                <button type="button" class="nextBtn" disabled>다음</button>
+            <form class="form hide" id="form2">
+                <label for="userName">이름</label>
+                <input type="text" id="userName" placeholder="이름을 입력해 주세요.">
+                <label>성별</label>
+                <div>
+                    <button type="button" class="btnW" value="female">여성</button>
+                    <button type="button" class="btnM" value="male">남성</button>
+                </div>
+                <label for="studentNum">학번</label>
+                <input type="number" id="studentNum" placeholder="학번을 입력해 주세요.">
+                <label for="department">학과/학부</label>
+                <input type="text" id="department" placeholder="학과/학부 입력해 주세요.">
+                <button type="button" class="compBtn" disabled>완료하기</button>
             </form>
-
         </section>
     </div>
-    <script src="signUp1.js"></script>
+    <script src="signUp3.js"></script>
     <script src="active.js"></script>
     <script src="apitest.js"></script>
 </body>
