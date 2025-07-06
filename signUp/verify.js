@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
         .then(response => response.text())
         .then(result => {
             if (result === 'Verification success') {
-                window.location.href = 'signUp3.js';
+                window.location.href = 'signUp3.html';
             } else {
                 alert('인증 실패: ' + result);
             }
