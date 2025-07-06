@@ -1,0 +1,271 @@
+.pt_header2 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  /* align-items: center; */
+}
+
+.img3_ct {
+    display : flex;
+    justify-content: space-between;
+}
+
+.img3_ct > img {
+    margin-left: 21px;
+    margin-top : 59px;
+    margin-bottom : 30px;
+    margin-right : 21px;
+}
+
+.info_part2 {
+width: 150.032px;
+height: 36px;
+flex-shrink: 0;
+border-radius: 6px;
+background: #00F5A0;
+color: #000;
+font-family: 'GmarketSans';
+font-size: 15px;
+font-style: normal;
+font-weight: normal;
+line-height: 150%; /* 22.5px */
+  transition: background 0.2s, color 0.2s;
+    margin-top:25px;
+  margin-bottom:25px;
+  border:0px;
+}
+/* 수정 삭제 모달창 */
+
+
+.more-menu-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.more-menu-list {
+  position: absolute;
+  top: -25px;
+  right: 20px;
+  width: 65px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #1E1F23;
+  display: none;
+  flex-direction: column;
+  z-index: 100;
+  padding: 0;
+}
+
+.more-menu-list button {
+  width: 65px;
+  height: 35px;
+  flex-shrink: 0;
+  background: #1E1F23;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'GmarketSans', sans-serif;
+  font-size: 12.049px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 110%;
+  letter-spacing: -0.361px;
+  text-align: left;
+  /* padding-left: 13px; */
+  /* transition: background 0.15s, color 0.15s; */
+  text-align: center;
+}
+
+.more-menu-list button:hover {
+  background: #00F5A0;
+  color: #1E1F23;
+  font-family: 'GmarketSans';
+font-size: 12.049px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%; /* 13.254px */
+letter-spacing: -0.361px;
+}
+
+.more-menu-edit {
+color: #8D8D8D;
+  font-family: 'GmarketSans';
+font-size: 12.049px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%; /* 13.254px */
+letter-spacing: -0.361px;
+border-radius: 6px 6px 0 0;
+padding: 0;
+}
+
+.more-menu-delete {
+color: #8D8D8D;
+  font-family: 'GmarketSans';
+font-size: 12.049px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%; /* 13.254px */
+letter-spacing: -0.361px;
+border-radius: 0 0 6px 6px;
+padding: 0;
+}
+
+/* 삭제 버튼 누를시 모달 */
+
+.delete-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-modal-box {
+border-radius: 6px;
+background: #1E1F23;
+width: 236px;
+height: 132.834px;
+flex-shrink: 0;
+display : flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+}
+
+.delete-modal-msg {
+color: #FFF;
+text-align: center;
+font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+line-height: 96%; /* 10.56px */
+margin :0;
+margin-bottom : 35px;
+}
+
+.delete-modal-btns {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-modal-btns {
+  display: flex;
+  gap: 0;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 236px;
+height: 47.2px;
+flex-shrink: 0;
+border-radius: 0px 0px 6px 6px;
+background: #00F5A0;
+
+}
+
+.delete-modal-btns > p {
+
+    color: #1E1F23;
+font-family: 'GmarketSans';
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 21.6px */
+letter-spacing: -0.36px;
+}
+
+.delete-modal-divider {
+width: 1px;
+height: 27px;
+flex-shrink: 0;
+stroke-width: 1px;
+background-color : black;
+}
+
+
+
+/* 공구 막마 모달창 */
+
+.modal_overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_popup {
+border-radius: 6px;
+background: #1E1F23;
+width: 236px;
+height: 132.834px;
+flex-shrink: 0;
+display : flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+}
+
+.modal_title {
+color: #FFF;
+text-align: center;
+font-family: 'GmarketSans';
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+line-height: 96%; /* 10.56px */
+margin :0;
+}
+
+.modal_desc {
+color: #FFF;
+text-align: center;
+font-family: 'GmarketSans';
+font-size: 6px;
+font-style: normal;
+font-weight: 300;
+line-height: 180%; /* 10.8px */
+margin-bottom: 14px;
+margin-top : 7px;
+}
+
+.modal_btns {
+  display: flex;
+  gap: 0;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 236px;
+height: 47.2px;
+flex-shrink: 0;
+border-radius: 0px 0px 6px 6px;
+background: #00F5A0;
+
+}
+
+.modal_btns > p {
+
+    color: #1E1F23;
+font-family: 'GmarketSans';
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 21.6px */
+letter-spacing: -0.36px;
+}
+
+.modal_divider {
+width: 1px;
+height: 27px;
+flex-shrink: 0;
+stroke-width: 1px;
+background-color : black;
+}

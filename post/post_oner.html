@@ -1,0 +1,243 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/post/post.css">
+        <link rel="stylesheet" href="/post/post_oner.css">
+    </head>
+    <body>
+        <section class="post_ct">
+<div class="pt_header2">
+    <div class="img3_ct">
+            <img src="/img/back.svg" alt="뒤로가기">
+        <img src="/img/puls.svg" class="more-menu-btn" alt="더보기">
+        </div>    
+    <div class="more-menu-wrap">
+        <div class="more-menu-list">
+            <button class="more-menu-edit">수정</button>
+            <button class="more-menu-delete">삭제</button>
+        </div>
+    </div>
+</div>
+
+<!-- 삭제 확인 모달 -->
+<div class="delete-modal-overlay" style="display:none;">
+  <div class="delete-modal-box">
+    <p class="delete-modal-msg">작성한 내용을 삭제하시겠습니까?</p>
+    <div class="delete-modal-btns">
+      <p class="delete-modal-cancel">취소</p>
+      <span class="delete-modal-divider"></span>
+      <p class="delete-modal-confirm">확인</p>
+    </div>
+  </div>
+</div>
+
+
+
+        <section class="img_ct">
+            <img>
+            <img src="/svg/unheart.svg" class="post_heart">
+            <div class="picture_count"> 1/5 </div>
+        </section>
+
+        <section class="info_ct">
+
+            <section class="info_left">
+                <img src="/img/human.svg">
+                <div class="info_name_ct">
+                    <p class="info_name"> 사용자 이름</p>
+                    <p class="info_contant"> 성별 / 학번 / 학과 or 학부 </p>    
+                </div>
+            </section>
+
+    <section class="info_right">
+    <div class="info_n tooltip">
+        <span class="N">N <span class="N">지수</span></span>
+        <span class="percent">30%</span>
+        <div class="tooltiptext">
+        N 지수는 이전 30일 누적 활동 수 기준(참여 + 작성 + 쩜) 등을 조합해서 만든 표예요.
+        </div>
+    </div>
+    <div class="info_pr">
+        <p class="pr_human"> 17</p>
+        <p class="pt_total_human"> /20명 참여중</p>
+    </div>
+    </section>
+
+
+        </section>
+
+        <div class="line2"> </div>
+
+            <section class="detail_info_ct">
+
+                <div class="detail_title_ct">
+                    <div class="deatil_jip"> 직접수령 </div>
+                    <p class="detail_title"> 을지대 문구 공구 </p>
+                </div>
+
+                <section class="detail_info2_ct">
+
+                        <p class="divide_price"> 11,000원</p>
+                        <p class="before_price"> 220,000원</p>
+                    <div class="deatil_content_ct">
+
+                        <div class="detail_cont">
+                            <div class="magam">
+                                <p class="magam_word"> 마감 일시</p>
+                                <p class="magam_date"> 08.11 (월) 오후 8:00</p>
+                            </div>
+
+                            <div class="magam_time_ct"> 
+                                <p class="magam_time_word"> 거래 시간</p>
+                                <p class="magam_time"> 08.20 오후 2시 - 10시</p>
+                            </div>
+                            
+                            <div class="magam_place_ct">
+                                <p class="magam_place_word"> 거래 장소</p>
+                                <p class="magam_place"> 을지대학교 박애관 3층 </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </section>
+
+        <div class="line3"> </div>
+
+        <section class="info_detail_ct">
+            <div class="info_detail">
+
+                <p class="info_title"> 상세 정보 </p>
+                <div class="move_info"> 상세페이지 보러가기</div>
+
+                <div class="click_info">
+                    <div class="click_img_ct">
+                        <div class="click_img1"></div>
+                        <div class="click_img2"></div>
+                    </div>
+                    <p class="click_word"> 시험기간이라 그런가 괜히 펜 하나만 잘 써도 공부가 좀 잘 되는 느낌이 들더라구요..ㅎㅎ 그래서 이번엔 자주 쓰는 문구류만 모아서 공구 열어봤어요! 젤펜이랑 형광펜, 인덱스 스티커까지 딱 공부할 때 필요한 것만 담았고요, 혼자 사면 은근 비싼데 다 같이 사면 훨씬 저렴해요. 공부 열심히 하자는 의미로 하나쯤 같이 챙겨보면 좋을 것 같아요 :)</p>
+                </div>
+
+                <div class="ogu_ct">
+                    <button class="openchat5"> 오픈 채팅</button>
+                    <button class="info_part2" id="closeBtn">공구 마감</button>
+                </div>
+
+<!-- 모달 오버레이 + 팝업 -->
+<div class="modal_overlay" style="display:none;">
+  <div class="modal_popup">
+    <p class="modal_title">공구를 마감하시겠어요?</p>
+    <p class="modal_desc">※ 마감 후에는 재오픈이 불가능합니다.</p>
+    <div class="modal_btns">
+      <p class="modal_cancel" >취소</p>
+      <span class="modal_divider"></span>
+      <p class="modal_confirm">확인</p>
+    </div>
+  </div>
+</div>
+
+            </div>
+        </section>
+
+        </section>
+
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const moveInfoBtn = document.querySelector('.move_info');
+    const clickInfo = document.querySelector('.click_info');
+
+    // 처음엔 상세페이지 내용 숨김
+    if (clickInfo) clickInfo.style.display = 'none';
+
+    if (moveInfoBtn && clickInfo) {
+        moveInfoBtn.addEventListener('click', function() {
+        clickInfo.style.display = 'block'; // 상세 내용만 보이기
+        // moveInfoBtn.style.display = 'none'; // << 이 줄을 지우세요!
+        });
+    }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const closeBtn = document.getElementById('closeBtn');
+  const modal = document.querySelector('.modal_overlay');
+  const cancelBtn = document.querySelector('.modal_cancel');
+  const confirmBtn = document.querySelector('.modal_confirm');
+
+  // 공구 마감 버튼 클릭 시 모달 열기
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = 'flex';
+    });
+  }
+  // 취소 버튼 클릭 시 모달 닫기
+  if (cancelBtn && modal) {
+    cancelBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+  }
+  // 확인 버튼 클릭 시 모달 닫기 (추가 동작 가능)
+  if (confirmBtn && modal) {
+    confirmBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+      // 여기에 실제 마감 처리 코드를 추가하세요
+    });
+  }
+});
+
+// 더보기 메뉴 토글
+document.addEventListener('DOMContentLoaded', function() {
+  const moreBtn = document.querySelector('.more-menu-btn');
+  const menuList = document.querySelector('.more-menu-list');
+
+  if(moreBtn && menuList) {
+    moreBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      menuList.style.display = (menuList.style.display === 'flex') ? 'none' : 'flex';
+    });
+    // 바깥 클릭 시 닫기
+    document.addEventListener('click', function(e) {
+      if (menuList.style.display === 'flex') {
+        menuList.style.display = 'none';
+      }
+    });
+    // 메뉴 클릭 시 닫기 (원하면)
+    menuList.addEventListener('click', function(e){
+      menuList.style.display = 'none';
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const deleteBtn = document.querySelector('.more-menu-delete');
+  const modal = document.querySelector('.delete-modal-overlay');
+  const cancelBtn = document.querySelector('.delete-modal-cancel');
+  const confirmBtn = document.querySelector('.delete-modal-confirm');
+
+  // 삭제 버튼 클릭 시 모달 표시
+  if (deleteBtn && modal) {
+    deleteBtn.addEventListener('click', function() {
+      modal.style.display = 'flex';
+    });
+  }
+  // 취소 버튼 클릭 시 모달 닫기
+  if (cancelBtn && modal) {
+    cancelBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+  }
+  // 확인 버튼 클릭 시 모달 닫기 (여기에 실제 삭제 로직 추가)
+  if (confirmBtn && modal) {
+    confirmBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+      // 실제 삭제 처리 코드 추가
+    });
+  }
+});
+
+        </script>
+
+    </body>
+    </html>
