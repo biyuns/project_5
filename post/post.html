@@ -24,60 +24,64 @@
             <img src="/img/human.svg">
             <div class="info_name_ct">
                 <p class="info_name"> 사용자 이름</p>
-                <p class="info_contant"> 성별 / 학번 / 학과 or 학부 </p>
+                <p class="info_contant"> 성별 / 학번 / 학과 or 학부 </p>    
             </div>
         </section>
 
-        <section class="info_right">
-            <div class="info_n">
-                <p class="N"> N<p>지수</p> 
-                <p class="percent"> 30%</p>
-            </div>
+<section class="info_right">
+  <div class="info_n tooltip">
+    <span class="N">N <span class="N">지수</span></span>
+    <span class="percent">30%</span>
+    <span class="tooltiptext">
+      N 지수는 이전 30일 누적 활동 수 기준(참여 + 작성 + 쩜) 등을 조합해서 만든 표예요.
+    </span>
+  </div>
+  <div class="info_pr">
+    <p class="pr_human"> 17</p>
+    <p class="pt_total_human"> /20명 참여중</p>
+  </div>
+</section>
 
-            <div class="info_pr">
-                <p class="pr_human"> 17</p>
-                <p class="pt_total_human"> /20명 참여중</p>
-            </div>
-        </section>
 
     </section>
 
     <div class="line2"> </div>
 
-    <section class="detail_info_ct">
-        <div class="detail_title_ct">
-            <div class="deatil_jip"> 직접수령 </div>
-            <p class="detail_title"> 을지대 문구 공구 </p>
-        </div>
+        <section class="detail_info_ct">
 
-        <section class="detail_info2_ct">
-            <div class="deatil_content_ct">
+            <div class="detail_title_ct">
+                <div class="deatil_jip"> 직접수령 </div>
+                <p class="detail_title"> 을지대 문구 공구 </p>
+            </div>
 
-                <p class="divide_price"> 11,000원</p>
-                <p class="before_price"> 220,000원</p>
+            <section class="detail_info2_ct">
 
-                <div class="detail_cont">
-                    <div class="magam">
-                        <p class="magam_word"> 마감 일시</p>
-                        <p class="magam_date"> 08.11 (월) 오후 8:00</p>
-                    </div>
+                    <p class="divide_price"> 11,000원</p>
+                    <p class="before_price"> 220,000원</p>
+                <div class="deatil_content_ct">
 
-                    <div class="magam_time_ct"> 
-                        <p class="magam_time_word"> 거래 시간</p>
-                        <p class="magam_time"> 08.20 오후 2시 - 10시</p>
-                    </div>
-                    
-                    <div class="magam_place_ct">
-                        <p class="magam_place_word"> 거래 장소</p>
-                        <p class="magam_place"> 을지대학교 박애관 3층 </p>
+                    <div class="detail_cont">
+                        <div class="magam">
+                            <p class="magam_word"> 마감 일시</p>
+                            <p class="magam_date"> 08.11 (월) 오후 8:00</p>
+                        </div>
+
+                        <div class="magam_time_ct"> 
+                            <p class="magam_time_word"> 거래 시간</p>
+                            <p class="magam_time"> 08.20 오후 2시 - 10시</p>
+                        </div>
+                        
+                        <div class="magam_place_ct">
+                            <p class="magam_place_word"> 거래 장소</p>
+                            <p class="magam_place"> 을지대학교 박애관 3층 </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </section>
         </section>
-    </section>
 
-    <div class="line2"> </div>
+    <div class="line3"> </div>
 
     <section class="info_detail_ct">
         <div class="info_detail">
@@ -86,11 +90,13 @@
             <div class="move_info"> 상세페이지 보러가기</div>
 
             <div class="click_info">
-                <div class="click_img1"></div>
-                <div class="click_img2"></div>
+                <div class="click_img_ct">
+                    <div class="click_img1"></div>
+                    <div class="click_img2"></div>
+                </div>
                 <p class="click_word"> 시험기간이라 그런가 괜히 펜 하나만 잘 써도 공부가 좀 잘 되는 느낌이 들더라구요..ㅎㅎ 그래서 이번엔 자주 쓰는 문구류만 모아서 공구 열어봤어요! 젤펜이랑 형광펜, 인덱스 스티커까지 딱 공부할 때 필요한 것만 담았고요, 혼자 사면 은근 비싼데 다 같이 사면 훨씬 저렴해요. 공부 열심히 하자는 의미로 하나쯤 같이 챙겨보면 좋을 것 같아요 :)</p>
-
             </div>
+
             <div class="ogu_ct">
                 <button class="openchat5"> 오픈 채팅</button>
                 <button class="info_part"> 공구 참여</button>
@@ -99,6 +105,26 @@
     </section>
 
     </section>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const moveInfoBtn = document.querySelector('.move_info');
+  const clickInfo = document.querySelector('.click_info');
+
+  // 처음엔 상세페이지 내용 숨김
+  if (clickInfo) clickInfo.style.display = 'none';
+
+  if (moveInfoBtn && clickInfo) {
+    moveInfoBtn.addEventListener('click', function() {
+      clickInfo.style.display = 'block'; // 상세 내용만 보이기
+      // moveInfoBtn.style.display = 'none'; // << 이 줄을 지우세요!
+    });
+  }
+});
+
+
+
+    </script>
 
 </body>
 </html>
