@@ -6,7 +6,7 @@ const nextBtn = document.querySelector('.nextBtn');
 //화면 전환 코드
 const clickNext = () => {
     alert("이메일 확인해주세요")
-    window.location.href = "verify.html";
+    // window.location.href = "verify.html";
 }
 
 
