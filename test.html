@@ -9,6 +9,7 @@
     input, select, button { margin: 4px; }
     pre { background: #f4f4f4; padding: 10px; }
     section { margin-bottom: 24px; }
+    .error { color: red; }
   </style>
 </head>
 <body>
@@ -58,17 +59,75 @@
   </section>
 
   <script>
-    const BASE_URL = 'http://3.34.81.151:8080'; // 포트가 있으면 :포트번호 추가
+    const BASE_URL = 'http://3.34.81.151:8080';
 
-    // 회원가입 1단계
-    function signupStep1() {
-      axios.post(`${BASE_URL}/members/step1`, {
-        email: document.getElementById('signup_email').value,
-        password: document.getElementById('signup_password').value
-      })
-      .then(res => document.getElementById('result1').textContent = JSON.stringify(res.data, null, 2))
-      .catch(err => document.getElementById('result1').textContent = err.response ? JSON.stringify(err.response.data, null, 2) : err);
+    // 이메일 형식 체크 함수
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
+
+    // 회원가입 1단계 (JSON 방식)
+    function signupStep1() {
+      const email = document.getElementById('signup_email').value.trim();
+      const password = document.getElementById('signup_password').value.trim();
+      const resultEl = document.getElementById('result1');
+
+      // 입력값 체크
+      if (!email || !password) {
+        resultEl.innerHTML = '<span class="error">이메일과 비밀번호를 모두 입력해주세요.</span>';
+        return;
+      }
+      if (!validateEmail(email)) {
+        resultEl.innerHTML = '<span class="error">이메일 형식이 올바르지 않습니다.</span>';
+        return;
+      }
+
+      // 서버에 JSON 방식으로 전송
+      axios.post(`${BASE_URL}/api/members/step1`, {
+        email: email,
+        password: password
+      })
+      .then(res => resultEl.textContent = JSON.stringify(res.data, null, 2))
+      .catch(err => {
+        if (err.response && err.response.data) {
+          resultEl.textContent = JSON.stringify(err.response.data, null, 2);
+        } else {
+          resultEl.textContent = err;
+        }
+      });
+    }
+
+    // 회원가입 1단계 (form-data 방식, 서버가 form-data를 요구할 때만 사용)
+    /*
+    function signupStep1() {
+      const email = document.getElementById('signup_email').value.trim();
+      const password = document.getElementById('signup_password').value.trim();
+      const resultEl = document.getElementById('result1');
+
+      if (!email || !password) {
+        resultEl.innerHTML = '<span class="error">이메일과 비밀번호를 모두 입력해주세요.</span>';
+        return;
+      }
+      if (!validateEmail(email)) {
+        resultEl.innerHTML = '<span class="error">이메일 형식이 올바르지 않습니다.</span>';
+        return;
+      }
+
+      const params = new URLSearchParams();
+      params.append('email', email);
+      params.append('password', password);
+
+      axios.post(`${BASE_URL}/api/members/step1`, params)
+        .then(res => resultEl.textContent = JSON.stringify(res.data, null, 2))
+        .catch(err => {
+          if (err.response && err.response.data) {
+            resultEl.textContent = JSON.stringify(err.response.data, null, 2);
+          } else {
+            resultEl.textContent = err;
+          }
+        });
+    }
+    */
 
     // 이메일 인증
     function verifyEmail() {
