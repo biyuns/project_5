@@ -94,7 +94,7 @@ header>.compMBtn {
     /* 16.5px */
 }
 
-.modifyName>p {
+.modifyName>label {
     color: #FFF;
     font-family: 'GmarketSansMedium';
     font-size: 11px;
