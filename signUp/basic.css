@@ -14,13 +14,16 @@ body {
 
 .main {
     position: relative;
-    width: 393px;
-    height: 852px;
+    width: 100vw;
+    height: 100vh;
     background: #1E1F23;
     box-sizing: border-box;
     overflow: scroll;
     overflow-x: hidden;
     -ms-overflow-style: none;
+    display: flex;
+    justify-content: center;
+
 }
 
 .main::-webkit-scrollbar {
@@ -67,7 +70,7 @@ label {
 
 input {
     outline: none;
-    width: 351px;
+    width: 88vw;
     height: 47px;
     flex-shrink: 0;
     color: #8D8D8D;
@@ -90,7 +93,7 @@ input:last-of-type {
 }
 
 button {
-    width: 351px;
+    width: 88vw;
     height: 59px;
     flex-shrink: 0;
     border-radius: 50px;
@@ -104,6 +107,7 @@ button {
     /* 27px */
     border: 0;
     box-sizing: border-box;
+    margin-bottom: 70px;
 
 }
 

@@ -13,30 +13,33 @@
 }
 
 .notice_board_ct {
-    display : flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 95px;
 }
 
 .category_ct2 {
-    width : 357px;
+    width: 80vw;
     display: flex;
     flex-direction: row;
     gap: 10px;
     justify-self: center;
     overflow-x: auto;
-    margin-top : 3px;
-    margin-bottom : 17px;  
-      cursor: grab;
-  user-select: none; 
-    
+    margin-top: 3px;
+    margin-bottom: 17px;
+    cursor: grab;
+    user-select: none;
+
 }
 
 .category_ct2.active {
-  cursor: grabbing;
+    cursor: grabbing;
 }
+
 .category_ct2::-webkit-scrollbar {
-    display: none;                    /* 크롬, 사파리, 엣지 */
+    display: none;
+    /* 크롬, 사파리, 엣지 */
 }
 
 /* 아이템 크기는 그대로 유지 */
@@ -54,14 +57,14 @@
 }
 
 .category_word2 {
-    margin :0;
+    margin: 0;
 }
 
 
 .footer2 {
     color: #00F5A0;
     font-family: 'GmarketSansMedium';
-font-size: 11px;
-font-style: normal;
-font-weight: 500;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
 }

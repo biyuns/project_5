@@ -14,11 +14,20 @@ body {
 
 .main {
     position: relative;
-    width: 393px;
-    height: 852px;
+    width: 100vw;
+    height: 100vh;
     background: #1E1F23;
     box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
 }
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+
 
 
 header {
@@ -48,7 +57,7 @@ section {
 }
 
 .buyInfo {
-    width: 357px;
+    width: 88vw;
     height: 131px;
     flex-shrink: 0;
     border-radius: 6px;
