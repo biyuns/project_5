@@ -63,24 +63,24 @@ const showList = (lists) => {
 
         buyInfo.classList.add('buyInfo');
         productImg.classList.add('productImg');
-        productImg.setAttribute('src', "../svg/product.svg");
+        productImg.setAttribute('src', "svg\\product.svg");
         buyInfoText.classList.add('buyInfoText');
         heart.classList.add('heart');
 
         //찜 유무에 따라 svg변경
         if (list.like) {
-            heart.setAttribute('src', "../svg/heart.svg");
+            heart.setAttribute('src', "svg\\heart.svg");
         } else {
-            heart.setAttribute('src', "../svg/unheart.svg");
+            heart.setAttribute('src', "svg\\unheart.svg");
         }
 
         //찜 유무 변경
         heart.addEventListener('click', () => {
             list.like = !list.like;
             if (list.like) {
-                heart.setAttribute('src', "../svg/heart.svg");
+                heart.setAttribute('src', "svg\\heart.svg");
             } else {
-                heart.setAttribute('src', "../svg/unheart.svg");
+                heart.setAttribute('src', "svg\\unheart.svg");
             }
         })
 
