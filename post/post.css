@@ -23,6 +23,13 @@
   font-weight: 300;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;           /* 부모 요소의 색상 따라감 */
+  text-decoration: none;    /* 밑줄도 제거 */
+}
 
 body {
   min-height: 100vh;
@@ -79,7 +86,7 @@ body {
   box-sizing: border-box;
 }
 
-.pt_header>img {
+.pt_header {
   margin-left: 21px;
   margin-top: 59px;
   margin-bottom: 30px;
