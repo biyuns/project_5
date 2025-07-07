@@ -108,14 +108,14 @@
 }
 
 section {
-    margin-top: 95px;
+
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 header {
-    position: fixed;
+
     text-align: center;
     color: #FFF;
     font-family: 'GmarketSansMedium';
@@ -129,4 +129,23 @@ header {
     height: 90px;
     background-color: #1E1F23;
     box-sizing: border-box;
+}
+
+
+
+.footer2 {
+    color: #00F5A0;
+    font-family: 'GmarketSansMedium';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.ft_nv {
+    width: 393px;
+    height: 95px;
+    display: flex;
+    justify-content: space-evenly;
+    background: #161616;
+    position: inherit !important;
 }
