@@ -25,13 +25,23 @@ body {
 
 
 .ct {
-    width: 393px;
-    height: 852px;
+    width: 100vw;
+    height: 100vh;
     background: #1E1F23;
     box-sizing: border-box;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* 스크롤 가능하게 */
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
 }
+
+/* 스크롤 숨기기 */
+.ct::-webkit-scrollbar {
+    display: none;
+}
+
 
 /* 상단(제목, 검색+알림 로고) css  */
 .top-ct {
@@ -99,12 +109,12 @@ body {
 
 /* 하단바 css */
 .ft_nv {
-    width: 393px;
+    width: 100vw;
     height: 95px;
     display: flex;
     justify-content: space-evenly;
     background: #161616;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
 }
@@ -145,8 +155,12 @@ p {
     justify-content: center;
 }
 
+.new_board {
+    margin-bottom: 95px;
+}
+
 .buyInfo {
-    width: 357px;
+    width: 88vw;
     height: 131px;
     flex-shrink: 0;
     border-radius: 6px;

@@ -1,5 +1,9 @@
+/* .main {
+    flex-direction: column;
+} */
+
 .buyInfo {
-    width: 357px;
+    width: 88vw;
     height: 131px;
     flex-shrink: 0;
     border-radius: 6px;
@@ -9,6 +13,10 @@
     box-sizing: border-box;
     margin-bottom: 10px;
     position: relative;
+}
+
+.mar {
+    margin-top: 95px;
 }
 
 .receipt {
@@ -112,7 +120,9 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
+
 }
+
 
 header {
 
@@ -142,10 +152,12 @@ header {
 }
 
 .ft_nv {
-    width: 393px;
+    width: 100vw;
     height: 95px;
     display: flex;
     justify-content: space-evenly;
     background: #161616;
-    position: inherit !important;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }

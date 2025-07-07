@@ -14,8 +14,8 @@ body {
 
 .main {
     position: relative;
-    width: 393px;
-    height: 852px;
+    width: 100vw;
+    height: 100vh;
     background: #1E1F23;
     box-sizing: border-box;
 }
@@ -37,6 +37,7 @@ header>.compMBtn {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+    padding: 0;
     /* 22.5px */
 }
 
@@ -72,11 +73,15 @@ header>.compMBtn {
 }
 
 .modifyName {
-    margin: 22px 19px 0 19px;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .modifyName>input {
-    width: 355px;
+    width: 88vw;
     height: 38px;
     flex-shrink: 0;
     border-radius: 6px;
@@ -101,6 +106,8 @@ header>.compMBtn {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+    margin-right: auto;
+    margin-left: 6vw;
     /* 16.5px */
 }
 
@@ -113,8 +120,8 @@ header>.compMBtn {
 .modal {
     position: absolute;
     background: rgba(33, 33, 33, 0.67);
-    width: 393px;
-    height: 852px;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     display: flex;

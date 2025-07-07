@@ -20,7 +20,8 @@
 
 .btnW,
 .btnM {
-    width: 169px;
+    margin-bottom: 0;
+    width: 42vw;
     height: 47px;
     flex-shrink: 0;
     border-radius: 6px;
@@ -39,7 +40,7 @@
 }
 
 .btnW {
-    margin-right: 9px;
+    margin-right: 2vw;
 }
 
 #form2>div {

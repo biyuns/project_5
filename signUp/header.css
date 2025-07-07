@@ -1,8 +1,8 @@
 header {
-    padding-top: 55px;
+    padding: 8px 0 45px 0;
     height: 51px;
     background-color: #1E1F23;
-    width: 393px;
+    width: 88vw;
 
 }
 
@@ -45,7 +45,7 @@ header {
     height: 17px;
     width: 8px;
     padding: 0;
-    margin: 0 12px 0 21px;
+    margin: 0 12px 0 0;
 
 }
 
@@ -66,13 +66,13 @@ header {
 }
 
 .headerP1 {
-    margin-left: 37px;
+    margin-left: 16px;
 }
 
 .headerP2 {
-    margin-left: 97px;
+    margin-left: 76px;
 }
 
 .headerP3 {
-    margin-left: 157px;
+    margin-left: 136px;
 }
