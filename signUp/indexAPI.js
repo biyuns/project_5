@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 로그인 버튼 클릭 시 API 연동
     loginBtn.addEventListener('click', ()=>{
-        window.location.href = "main_pg.html"
+        window.location.href = "/main/main_pg.html"
     }
     //     async function() {
     //     const email = emailInput.value.trim();
