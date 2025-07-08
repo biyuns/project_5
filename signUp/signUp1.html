@@ -49,21 +49,39 @@
         </section>
     </div>
 
-        <script>
-        document.querySelector('.nextBtn').addEventListener('click', function() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('pw').value;
-    const passwordCheck = document.getElementById('checkPW').value;
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const emailInput = document.getElementById('email');
+    const pwInput = document.getElementById('pw');
+    const checkPWInput = document.getElementById('checkPW');
+    const nextBtn = document.querySelector('.nextBtn');
 
-    // sessionStorage에 값 저장
-    sessionStorage.setItem('email', email);
-    sessionStorage.setItem('password', password);
-    sessionStorage.setItem('passwordCheck', passwordCheck);
+    function checkInputs() {
+        if (emailInput.value && pwInput.value && checkPWInput.value) {
+            nextBtn.disabled = false;
+        } else {
+            nextBtn.disabled = true;
+        }
+    }
 
-    // 두 번째 페이지로 이동
-    window.location.href = 'signUp3.html'; // 실제 파일명에 맞게 수정
+    emailInput.addEventListener('input', checkInputs);
+    pwInput.addEventListener('input', checkInputs);
+    checkPWInput.addEventListener('input', checkInputs);
+
+    nextBtn.addEventListener('click', function() {
+        const email = emailInput.value;
+        const password = pwInput.value;
+        const passwordCheck = checkPWInput.value;
+
+        sessionStorage.setItem('email', email);
+        sessionStorage.setItem('password', password);
+        sessionStorage.setItem('passwordCheck', passwordCheck);
+
+        window.location.href = 'signUp3.html'; // 실제 파일명에 맞게 수정
+    });
 });
 </script>
+
     <!-- <script src="signUp1.js"></script> -->
     <!-- <script src="active1.js"></script> -->
 </body>
