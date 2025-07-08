@@ -96,33 +96,54 @@ document.querySelector('.compBtn').addEventListener('click', async function() {
     const studentNumber = document.getElementById('studentNum').value.trim();
     const department = document.getElementById('department').value.trim();
 
+    // 요청 데이터 콘솔에 출력
+    console.log('회원가입 요청 데이터:', {
+        email,
+        password,
+        passwordCheck,
+        name,
+        gender: selectedGender,
+        studentNumber,
+        department
+    });
+
     try {
         const response = await fetch('/api/members/step1', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                email: email,
-                password: password,
-                passwordCheck: passwordCheck,
-                name: name,
+                email,
+                password,
+                passwordCheck,
+                name,
                 gender: selectedGender,
-                studentNumber: studentNumber,
-                department: department
+                studentNumber,
+                department
             })
         });
 
+        // 응답 상태 코드 콘솔에 출력
+        console.log('응답 상태 코드:', response.status);
+
         if (response.ok) {
+            const result = await response.json();
+            // 응답 데이터 콘솔에 출력
+            console.log('응답 데이터:', result);
             alert('회원가입이 완료되었습니다!');
-            // 다음 단계로 이동 (예: 메인 페이지)
             // window.location.href = 'main.html';
         } else {
             const result = await response.json();
+            // 에러 응답 콘솔에 출력
+            console.error('에러 응답:', result);
             alert('에러: ' + (result.message || '회원가입 실패'));
         }
     } catch (error) {
+        // 네트워크 오류 콘솔에 출력
+        console.error('네트워크 오류:', error);
         alert('네트워크 오류');
     }
 });
+
 
     </script>
     <script src="signUp3.js"></script>
