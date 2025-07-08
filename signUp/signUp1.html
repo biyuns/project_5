@@ -48,9 +48,24 @@
 
         </section>
     </div>
-    <script src="signUp1.js"></script>
+
+        <script>
+        document.querySelector('.nextBtn').addEventListener('click', function() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('pw').value;
+    const passwordCheck = document.getElementById('checkPW').value;
+
+    // sessionStorage에 값 저장
+    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('password', password);
+    sessionStorage.setItem('passwordCheck', passwordCheck);
+
+    // 두 번째 페이지로 이동
+    window.location.href = 'signUp3.html'; // 실제 파일명에 맞게 수정
+});
+</script>
+    <!-- <script src="signUp1.js"></script> -->
     <script src="active1.js"></script>
-    <script src="apitest.js"></script>
 </body>
 
 </html>
